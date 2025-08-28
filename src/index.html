@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervare Locuri Teatru</title>
+    <link rel="stylesheet" href="style.css?v=9">
+
+</head>
+<body>
+    <div class="main-layout">
+      <!-- Partea stângă: Banner + Căutare -->
+      <div class="sidebar">
+        <div class="banner">
+          <div class="banner-content">
+            <h1 class="banner-title">Bine ați venit la Teatrul Regal</h1>
+            <div class="reservation-container">
+              <h2>Caută locul (1-250)</h2>
+              <input type="number" id="cautaLoc" placeholder="Număr loc" min="1" max="250">
+              <select id="algoritm_cautare">
+                <option value="cautare_binara">Căutare Binară</option>
+                <option value="cautare_ternara">Căutare Ternară</option>
+                <option value="cautare_salturi">Căutare cu Salturi</option>
+                <option value="cautare_interpolare">Căutare prin Interpolare</option>
+                <option value="cautare_exponentiala">Căutare Exponențială</option>
+                <option value="cautare_fibonacci">Căutare Fibonacci</option>
+              </select>
+              <button id="searchBtn" onclick="startCautare()">Caută</button>
+              <button id="resetBtn">Resetează</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Partea dreaptă: Scena și locurile -->
+      <div class="content">
+        <div class="stage">SCENA</div>
+        <div class="theater-seats">
+            <div id="upper-section" class="seat-section"></div>
+            <div id="middle-section" class="seat-section"></div>
+        
+            <!-- Nou container pentru side-left și side-right -->
+            <div class="side-section">
+                <div id="side-left" class="seat-section"></div>
+                <div id="side-right" class="seat-section"></div>
+            </div>
+        
+            <div id="front-section" class="seat-section"></div>
+        </div>
+       
+        <p id="status"></p>
+      </div>
+    </div>
+  
+    <script src="script.js?v=9"></script>
+</body>
+  
+</html>

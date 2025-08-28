@@ -1,0 +1,238 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 30%;
+    background-color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/th.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner-content {
+    background: rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.banner-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.reservation-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="number"], select {
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    width: 150px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#searchBtn {
+    background-color: #3498db;
+    color: white;
+}
+
+#resetBtn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.content {
+    width: 70%;
+    background-image: url('/images/fundal9.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+#status{
+    color: white;
+}
+.stage {
+    background-color: #ffcc00;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 25px 100px;
+    border-radius: 10px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.theater-seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.side-section {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+}
+
+#upper-section,
+#middle-section,
+#side-left,
+#side-right,
+#front-section {
+    display: grid;
+    row-gap: 4px;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* Dimensiuni per secțiune */
+#upper-section {
+    grid-template-columns: repeat(10, 36px);
+}
+#middle-section {
+    grid-template-columns: repeat(25, 36px);
+}
+#side-left, #side-right {
+    grid-template-columns: repeat(10, 36px);
+}
+#front-section {
+    grid-template-columns: repeat(25, 36px);
+}
+
+.seat {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40%;
+    background-color: #ecf0f1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.seat:hover {
+    transform: scale(1.1);
+    background-color: #2980b9;
+    color: white;
+}
+
+.searching {
+    background-color: yellow !important;
+    animation: blink 0.5s infinite alternate;
+}
+
+.partition {
+    background-color: rgb(168, 168, 219) !important;
+    color: white;
+    font-weight: bold;
+}
+
+.found {
+    background-color: rgb(104, 238, 104) !important;
+    color: white;
+    font-weight: bold;
+}
+
+.eliminated {
+    background-color: rgb(205, 124, 124) !important;
+    opacity: 0.5;
+}
+
+@keyframes blink {
+    0% { background-color: yellow; }
+    100% { background-color: orange; }
+}
+
+
+.eliminated-step-1 { background-color: rgba(231, 76, 60, 0.4) !important; }
+.eliminated-step-2 { background-color: rgba(241, 196, 15, 0.4) !important; }
+.eliminated-step-3 { background-color: rgba(52, 152, 219, 0.4) !important; }
+.eliminated-step-4 { background-color: rgba(46, 204, 113, 0.4) !important; }
+.eliminated-step-5 { background-color: rgba(155, 89, 182, 0.4) !important; }
+.eliminated-step-6 { background-color: rgba(230, 126, 34, 0.4) !important; }
+.eliminated-step-7  { background-color: rgba(26, 188, 156, 0.4) !important; }
+.eliminated-step-8  { background-color: rgba(52, 73, 94, 0.4) !important; }
+.eliminated-step-9  { background-color: rgba(241, 90, 36, 0.4) !important; }
+.eliminated-step-10 { background-color: rgba(127, 140, 141, 0.4) !important; }
+
+.partition-step-1 { background-color: #b897be; }   /* Mov */
+.partition-step-2 { background-color: #495077; }   /* Albastru */
+.partition-step-3 { background-color: #50968f; }   /* Verde */
+.partition-step-4 { background-color: #9bdbb1; }   /* Portocaliu */
+.partition-step-5 { background-color: #ab657d; }   /* Roz */
+.partition-step-6 { background-color: #816257; }   /* Maro */
+.partition-step-7 { background-color: #00bcd4; }   /* Cyan */
+.partition-step-8 { background-color: #8bc34a; }   /* Verde Deschis */
+.partition-step-9 { background-color: #f44336; }   /* Roșu */
+.partition-step-10 { background-color: #607d8b; }  /* Gri Albastru */
+.partition-step-11 { background-color: #673ab7; }  /* Violet Închis */
+.partition-step-12 { background-color: #4caf50; }  /* Verde Plin */
